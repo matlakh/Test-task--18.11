@@ -1,0 +1,184 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 740px;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #F3A917;
+        margin-bottom: 160px;
+        @media(max-width: 1080px) {
+            max-width: 100%;
+        }
+    }
+    &__socials {
+        max-width: 210px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media(max-width: 500px) {}
+    }
+    &__logo {
+        max-width: 190px;
+    }
+    &__text {
+        max-width: 710px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+        color: #FAFAFA;
+        & img {
+            max-width: 190px;
+            @media(max-width: 1080px) {
+                margin: 0 auto;
+                display: block;
+            }
+        }
+        @media(max-width: 1080px) {
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 73px;
+        margin-bottom: 25px;
+        margin-top: 50px;
+        @media(max-width: 1080px) {
+            text-align: center;
+        }
+        @media(max-width: 500px) {
+            font-size: 40px;
+            line-height: 35px;
+        }
+    }
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        max-width: 530px;
+        margin-top: 200px;
+        @media(max-width: 1080px) {
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        @media(max-width: 550px) {
+            justify-content: center;
+            flex-direction: column;
+            max-width: 246px;
+        }
+    }
+    &__button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 20px;
+        max-width: 246px;
+        width: 100%;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.01em;
+        transition: .3s ease;
+        border: 2px solid #F3A917;
+        &:nth-child(1) {
+            background: #F3A917;
+            color: #000000;
+            &:hover {
+                background: transparent;
+                color: #fff;
+            }
+            @media(max-width: 550px) {
+                margin-bottom: 10px;
+            }
+        }
+        &:nth-child(2) {
+            background: transparent;
+            color: #fff;
+            &:hover {
+                background: #F3A917;
+                color: #000000;
+            }
+        }
+    }
+    &__swiper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        & .swiper-wrapper {
+            height: 100%;
+        }
+        @media(max-width: 1080px) {
+            height: 990px;
+        }
+    }
+    &__slide {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: .3s ease;
+        &--third {
+            background-image: url(../img/header/bg_3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &--first {
+            background-image: url(../img/header/bg_1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+        &--second {
+            background-image: url(../img/header/bg_2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    &__pagination {
+        position: absolute;
+        bottom: 25px !important;
+        max-width: 81px;
+        display: flex;
+        justify-content: space-between;
+        z-index: 10;
+        cursor: pointer;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        outline: none;
+    }
+    @media(max-width: 1080px) {
+        height: 990px;
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 15px;
+    z-index: 10;
+    height: 15px;
+    outline: none;
+    background: #FFFFFF;
+    opacity: initial;
+}
+
+.swiper-pagination-bullet-active {
+    width: 15px;
+    height: 15px;
+    z-index: 10;
+    background: #F3A917;
+    outline: none;
+}

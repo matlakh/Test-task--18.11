@@ -1,0 +1,103 @@
+.footer {
+    background-image: url(../img/footer/footer_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    background-clip: border-box;
+    &__inner {
+        padding-top: 510px;
+        padding-bottom: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
+        margin-right: 0;
+        @media(max-width: 1024px) {
+            padding-top: 200px;
+            flex-direction: row;
+            max-width: 100%;
+        }
+        @media(max-width:375px) {
+            padding-top: 100px;
+            width: 300px;
+            margin-right: auto;
+        }
+    }
+    &__reg-count {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 45px;
+        color: #FFFFFF;
+        @media(max-width: 375px) {
+            font-size: 22px;
+        }
+    }
+    &__timer {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 45px;
+        color: #FFFFFF;
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 55px;
+        & a {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 35px;
+            color: #FFFFFF;
+        }
+    }
+    &__table {
+        &--header td {
+            background: #F3A917 !important;
+            color: #fff !important;
+        }
+    }
+    & table {
+        border-collapse: collapse;
+        border: 1px solid #F3A917;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 35px;
+        color: #FFFFFF;
+        width: 660px;
+        & tr:hover .footer__count,
+        & tr:hover .footer__names {
+            background: #fff;
+            color: #000;
+        }
+        @media(max-width:715px) {
+            width: 100%
+        }
+        @media(max-width:375px) {
+            width: 300px
+        }
+    }
+    & td,
+    th {
+        border: 1px solid #F3A917;
+        background: #292A2F;
+        height: 55px;
+    }
+    &__names {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 20px;
+        & img {
+            margin-right: 10px;
+        }
+    }
+    &__count {
+        width: 72px;
+    }
+}
